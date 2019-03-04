@@ -12,3 +12,8 @@ objects:
     channel: preview
     name: prometheus
     source: rh-operators
+parameters:
+- name: IMAGE_TAG
+  value: none
+  displayName: dummy image tag to workaround saasherder IMAGE_TAG override
+
