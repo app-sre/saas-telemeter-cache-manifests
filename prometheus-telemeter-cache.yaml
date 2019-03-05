@@ -257,7 +257,7 @@ objects:
       params:
         'match[]':
         - '{__name__="cluster_version"}'
-        - '{__name__=cluster_operator_up",name="openshift-apiserver"}'
+        - '{__name__="cluster_operator_up",name="openshift-apiserver"}'
         - '{__name__="machine_cpu_cores"}'
         - '{__name__="machine_memory_bytes"}'
       path: /federate
