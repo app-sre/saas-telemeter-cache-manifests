@@ -255,11 +255,19 @@ objects:
       honorLabels: true
       interval: 60s
       params:
+        # https://github.com/openshift/telemeter/blob/master/jsonnet/telemeter/metrics.jsonnet
         'match[]':
         - '{__name__="cluster_version"}'
         - '{__name__="cluster_operator_up",name="openshift-apiserver"}'
+        - '{__name__="cluster:capacity_cpu_cores:sum"}'
+        - '{__name__="cluster:cpu_usage_cores:sum"}'
+        - '{__name__="openshift:cpu_usage_cores:sum"}'
         - '{__name__="machine_cpu_cores"}'
+        - '{__name__="cluster:capacity_memory_bytes:sum"}'
+        - '{__name__="cluster:memory_usage_bytes:sum"}'
+        - '{__name__="openshift:memory_usage_bytes:sum"}'
         - '{__name__="machine_memory_bytes"}'
+        - '{__name__="cluster:node_instance_type_count:sum"}'
       path: /federate
       port: https
       scheme: https
